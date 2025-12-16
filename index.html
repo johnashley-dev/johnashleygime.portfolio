@@ -9,361 +9,221 @@
   <style>
     :root {
       --bg:#0b1020;
-      --card:#111a33;
       --text:#e9eefc;
       --muted:#a8b3d6;
       --accent:#6aa9ff;
       --line:rgba(255,255,255,.08);
     }
-
-    * { box-sizing:border-box; }
-
-    body {
+    *{box-sizing:border-box}
+    body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
       background:radial-gradient(1200px 700px at 10% 0%, #16224a 0%, var(--bg) 60%);
       color:var(--text);
     }
-
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-
-    .wrap { max-width:1050px; margin:0 auto; padding:28px; }
-
-    .topline {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .badge {
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1050px;margin:0 auto;padding:28px}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
       border:1px solid var(--line);
-      padding:8px 12px;
-      border-radius:999px;
-      color:var(--muted);
-      background:rgba(255,255,255,.03);
+      padding:8px 12px;border-radius:999px;
+      color:var(--muted);background:rgba(255,255,255,.03)
     }
-
-    .hero {
-      padding:28px 0 10px;
-      display:grid;
-      gap:14px;
-    }
-
-    h1 {
-      margin:0;
-      font-size:42px;
-      line-height:1.1;
-    }
-
-    .sub {
-      color:var(--muted);
-      max-width:70ch;
-      font-size:16px;
-      line-height:1.6;
-    }
-
-    .cta {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:6px;
-    }
-
-    .btn {
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:12px;
+    h1{margin:0;font-size:42px}
+    h2{margin:0 0 10px;font-size:18px}
+    .sub{color:var(--muted);max-width:70ch;line-height:1.6}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .btn{
+      padding:10px 14px;border-radius:12px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.05);
-      color:var(--text);
+      color:var(--text)
     }
-
-    .btn.primary {
+    .btn.primary{
       background:linear-gradient(90deg, rgba(106,169,255,.25), rgba(106,169,255,.08));
-      border-color:rgba(106,169,255,.35);
+      border-color:rgba(106,169,255,.35)
     }
-
-    .pillrow {
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-
-    .pill {
-      font-size:13px;
-      color:var(--muted);
-      border:1px solid var(--line);
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.03);
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:16px;
-      margin-top:18px;
-    }
-
-    .card {
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:22px}
+    .card{
       grid-column:span 12;
       background:rgba(255,255,255,.04);
       border:1px solid var(--line);
       border-radius:18px;
-      padding:18px;
+      padding:18px
     }
-
-    @media (min-width:900px) {
-      .card.half { grid-column:span 6; }
-      .card.third { grid-column:span 4; }
-    }
-
-    h2 {
-      margin:0 0 10px;
-      font-size:18px;
-    }
-
-    .muted { color:var(--muted); }
-
-    .rec {
-      display:grid;
-      gap:12px;
-      margin-top:14px;
-    }
-
-    .recitem {
+    @media(min-width:900px){.half{grid-column:span 6}}
+    .muted{color:var(--muted)}
+    .rec{display:grid;gap:14px}
+    .recitem{
       padding:14px;
       border:1px solid var(--line);
       border-radius:14px;
-      background:rgba(0,0,0,.12);
+      background:rgba(0,0,0,.12)
     }
-
-    .recmeta {
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:13px;
+    .recmeta{
+      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      font-size:13px;color:var(--muted)
     }
-
-    .quote {
-      margin:8px 0 0;
-      line-height:1.6;
-    }
-
-    footer {
-      margin:26px 0 8px;
-      color:var(--muted);
-      font-size:13px;
-    }
+    .quote{margin:8px 0 0;line-height:1.6}
+    footer{margin:28px 0 8px;color:var(--muted);font-size:13px}
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <div class="topline">
-      <div class="badge">⚡ Available for freelance & remote work</div>
-      <div class="muted">PH (UTC+8)</div>
+  <div class="badge">⚡ Available for freelance & remote work</div>
+
+  <section style="margin-top:18px">
+    <h1>John Ashley Gime</h1>
+    <div class="sub">
+      I help founders, coaches, and creators with landing pages,
+      video & podcast editing, and virtual assistance.
+      Long-term clients, clear communication, and reliable delivery.
     </div>
 
-    <section class="hero">
-      <h1>John Ashley Gime</h1>
+    <div class="cta">
+      <a class="btn primary" href="mailto:youremail@gmail.com">✉️ Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/johnashleygime/" target="_blank">🔗 LinkedIn</a>
+      <a class="btn" href="#recommendations">⭐ All Recommendations</a>
+    </div>
+  </section>
 
-      <div class="sub">
-        I help founders, coaches, and creators with
-        <b>landing pages</b>, <b>video & podcast editing</b>,
-        and <b>virtual assistance</b>.
-        Clear communication, fast turnaround, and no disappearing acts.
+  <!-- RECOMMENDATIONS -->
+  <section class="grid" id="recommendations">
+    <div class="card">
+      <h2>LinkedIn Recommendations (Full, Verifiable)</h2>
+      <div class="muted">
+        Below are full client recommendations copied directly from LinkedIn.
+        LinkedIn does not allow embedding, so all testimonials link back to the original source.
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="mailto:youremail@gmail.com">✉️ Email me</a>
-        <a class="btn" href="https://www.linkedin.com/in/johnashleygime/" target="_blank">🔗 LinkedIn</a>
-        <a class="btn" href="#recommendations">⭐ Client Feedback</a>
+      <div class="cta" style="margin:12px 0">
+        <a class="btn primary"
+           href="https://www.linkedin.com/in/johnashleygime/details/recommendations/"
+           target="_blank">
+          ✅ View originals on LinkedIn
+        </a>
       </div>
 
-      <div class="pillrow">
-        <span class="pill">Landing Pages</span>
-        <span class="pill">Video Editing</span>
-        <span class="pill">Podcast Editing</span>
-        <span class="pill">Virtual Assistance</span>
-        <span class="pill">Tech Support</span>
-      </div>
-    </section>
+      <div class="rec">
 
-    <section class="grid">
-      <div class="card third">
-        <h2>What I do</h2>
-        <div class="muted">
-          Build clean, conversion-focused pages, edit content professionally,
-          and support operations behind the scenes.
-        </div>
-      </div>
-
-      <div class="card third">
-        <h2>How I work</h2>
-        <div class="muted">
-          Clear scope → fast execution → honest updates → solid results.
-        </div>
-      </div>
-
-      <div class="card third">
-        <h2>Contact</h2>
-        <div class="muted">
-          Email: <a href="mailto:youremail@gmail.com">youremail@gmail.com</a><br>
-          LinkedIn: <a href="https://www.linkedin.com/in/johnashleygime/" target="_blank">Profile</a>
-        </div>
-      </div>
-
-      <!-- RECOMMENDATIONS -->
-      <div class="card half" id="recommendations">
-        <h2>LinkedIn Recommendations</h2>
-        <div class="muted">
-          Real client feedback copied directly from LinkedIn.
-          LinkedIn does not allow direct embedding, so excerpts are shown below with a verification link.
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Jerica Atilano David</b> — Estate Planner & Wealth Coach</span>
+            <span>Client · June 27, 2025</span>
+          </div>
+          <p class="quote">
+            “I’ve been working with Ash for more than 2 years now! I’m surprised because I usually switch VAs or editors
+            but I’ve trusted him with my videos and website design and I’m very happy with our outputs.
+            I’m still working with him for my YouTube. He is very hardworking and teachable.”
+          </p>
         </div>
 
-        <div class="cta" style="margin-top:12px;">
-          <a class="btn primary"
-             href="https://www.linkedin.com/in/johnashleygime/details/recommendations/"
-             target="_blank">
-            ✅ View & verify on LinkedIn
-          </a>
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Marc Mangus</b> — Principal Healthcare Strategist @ Red Hat</span>
+            <span>Client · June 26, 2025</span>
+          </div>
+          <p class="quote">
+            “I highly recommend John Ashley Gime for his exceptional work as a Virtual Assistant.
+            He was an invaluable asset, significantly enhancing our operations and outreach,
+            particularly for my Spirit Health Activation programs.
+            John played a pivotal role in developing content and marketing strategies,
+            designing livestream events, audience building, lead generation,
+            video editing, email sequences, and SOP development.
+            His strategic insight and genuine engagement made him an exceptional VA.”
+          </p>
         </div>
 
-        <div class="rec">
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Jerica Atilano David</b> — Estate Planner & Wealth Coach</span>
-              <span>Client · 2+ years</span>
-            </div>
-            <p class="quote">
-              “I’ve been working with Ash for more than 2 years now.
-              I usually switch VAs or editors, but I trusted him with my videos
-              and website design and I’m very happy with the outputs.
-              He is very hardworking and teachable.”
-            </p>
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Robbie Kane</b> — Entrepreneurial ESL Coach</span>
+            <span>Client · October 30, 2023</span>
           </div>
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Marc Mangus</b> — Principal Healthcare Strategist, Red Hat</span>
-              <span>Client</span>
-            </div>
-            <p class="quote">
-              “John was an invaluable asset, enhancing operations, outreach,
-              content strategy, livestreams, lead generation, video editing,
-              email sequences, and SOP development.
-              His strategic insight and genuine engagement made him exceptional.”
-            </p>
-          </div>
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Robbie Kane</b> — Entrepreneurial ESL Coach</span>
-              <span>Client</span>
-            </div>
-            <p class="quote">
-              “John excels at what he does.
-              His efficiency, speed of communication, and ability to deliver
-              on vision impressed me every time.
-              I recommend him unreservedly.”
-            </p>
-          </div>
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Gieo Pensoneault</b> — Business Coach</span>
-              <span>Client</span>
-            </div>
-            <p class="quote">
-              “John is a versatile assistant with technical skills
-              that save time and frustration.
-              I recommend him to solopreneurs who need help with
-              websites, funnels, and automation.”
-            </p>
-          </div>
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Anastazja Gajkowska</b> — CEO, Expose Network</span>
-              <span>Client</span>
-            </div>
-            <p class="quote">
-              “John’s creativity, energy, and problem-solving skills
-              brought clarity and results to our projects.
-              I strongly recommend working with him.”
-            </p>
-          </div>
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Lucas Mattiello</b> — Public Speaking Coach</span>
-              <span>Client</span>
-            </div>
-            <p class="quote">
-              “After testing many editors, John was the best.
-              His communication was excellent and my videos
-              looked far more professional.”
-            </p>
-          </div>
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Frederick McClain</b>, MSL (ICF) ACC</span>
-              <span>Client</span>
-            </div>
-            <p class="quote">
-              “John was motivated, open to feedback,
-              and filled the creative gaps when I was stuck.
-              I wouldn’t hesitate to hire him again.”
-            </p>
-          </div>
-
-          <div class="recitem">
-            <div class="recmeta">
-              <span><b>Toni Bator</b>, MSL (ICF) ACC</span>
-              <span>Client</span>
-            </div>
-            <p class="quote">
-              “John created a results-driven landing page
-              and went above and beyond.
-              I immediately referred him to another client.”
-            </p>
-          </div>
-
+          <p class="quote">
+            “John truly excels at what he does. I reached out to him looking for an editor
+            who could save me time and add a professional layer of polish.
+            Every project impressed me with his efficiency, communication speed,
+            and ability to deliver on my vision.
+            If you’re looking for a top-quality video editor, I recommend John unreservedly.”
+          </p>
         </div>
+
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Gieo Pensoneault</b> — Business Coach</span>
+            <span>Client · August 4, 2023</span>
+          </div>
+          <p class="quote">
+            “John provided a variety of VA tasks for my coaching and training business.
+            He is a versatile assistant with technical skills that save time and frustration.
+            I recommend him to solopreneurs who need help with websites,
+            sales funnels, and task automation.”
+          </p>
+        </div>
+
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Anastazja Gajkowska</b> — CEO, Expose Network</span>
+            <span>Client · September 5, 2022</span>
+          </div>
+          <p class="quote">
+            “Working with John helped my team gain clarity in creating designs.
+            His energy, creativity, communication, and problem-solving skills
+            were extremely helpful, and he always aimed for real results.
+            I strongly recommend working with him.”
+          </p>
+        </div>
+
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Lucas Mattiello</b> — Public Speaking Coach</span>
+            <span>Client · September 16, 2021</span>
+          </div>
+          <p class="quote">
+            “After testing many editors, John was the best at delivering the exact style I wanted.
+            His communication was excellent and my videos looked professional
+            and attracted ideal clients.”
+          </p>
+        </div>
+
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Frederick McClain</b>, MSL (ICF) ACC — Leadership Coach</span>
+            <span>Client · July 29, 2021</span>
+          </div>
+          <p class="quote">
+            “John was motivated, open to feedback, and filled the creative void when I was stuck.
+            Because of his devotion to his trade, I was extremely satisfied
+            and would not hesitate to hire him again.”
+          </p>
+        </div>
+
+        <div class="recitem">
+          <div class="recmeta">
+            <span><b>Toni Bator</b>, MSL (ICF) ACC — Certified Coach</span>
+            <span>Client · June 10, 2021</span>
+          </div>
+          <p class="quote">
+            “John created an aesthetically pleasing, functional, and results-driven landing page.
+            He communicated throughout the project and went above and beyond.
+            I immediately referred him to a colleague.”
+          </p>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <div class="card half">
-        <h2>Portfolio</h2>
-        <div class="muted">
-          Landing pages, video editing, podcast editing,
-          and ongoing VA support for global clients.
-        </div>
-      </div>
-    </section>
+  <footer>
+    © <span id="y"></span> John Ashley Gime
+  </footer>
+</div>
 
-    <footer>
-      © <span id="y"></span> John Ashley Gime
-    </footer>
-
-  </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
